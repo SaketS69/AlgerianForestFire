@@ -9,8 +9,8 @@ ridge_model= pickle.load(open('models/ridge.pkl','rb'))
 standard_scaler = pickle.load(open('models/scaler.pkl','rb'))
 
 ##Route for home page
-
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 @app.route('/')
 def index():
     return render_template('index.html')
